@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/jpg" href="images/favicon.jpg" />
+    <!-- FavIcon Missing -->
     <link rel="stylesheet" type="text/css" href="./styling/style.css">
     <title>Product Detection v2</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
@@ -25,6 +25,30 @@
     </div>
 
     <!-- P R O D U C T  S E A R C H-->
+
+    <div class="container">
+
+
+        <div class="col div_1_of_3 ">
+            <div class="search-box__image-upload">
+               <input type="file" name="upload" id="file" accept="image/*" onchange="showResult( this.files[0]); loadFile(event)">
+                <img id="output" width="300" />
+            </div>
+        </div>
+
+
+        <div class="col div_2_of_3 ">
+            Results
+            <div class="search-box__image-results" id="textResults"></div>
+            
+        </div>
+
+
+        <div class="col div_2_of_3 "  >
+            Our Products
+        </div>
+    </div>
+    
     
 
 

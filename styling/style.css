@@ -39,10 +39,6 @@ body, html {
     font-weight: bold;
 }
 
-.header a:hover{
-    background-color: white;
-    color: aqua;
-}
 
 
 @media screen and (max-width: 500px) {
@@ -56,3 +52,51 @@ body, html {
       float: none;
     }
   }
+
+  /*----------------------*/
+    @media only screen and (min-width: 768px) {
+    .position-span-2 {
+     margin-left: 2%;
+     padding-left: 5%;
+    }
+   }
+   /*----------------------*/
+    @media only screen and (min-width: 480px) {
+     .div_1_of_3 {
+     width: 52%; 
+    }
+     .div_2_of_3 {
+     width: 22%;
+    }
+         .col {
+     display: block;
+     float: left;
+     margin: 1% 0 1% 1.6%;
+    }
+     .col:first-child {
+     margin-left: 0;
+    }
+}
+
+    .col {
+        align-self: center;
+        float: left;
+        width: 380px;
+        padding: 15px;
+        height: 200px;
+        border: solid black;
+        flex-wrap: wrap;
+     } 
+     
+     
+
+
+
+
+
+
+
+
+
+
+      /* M E D I A  Q U E R I E S */
