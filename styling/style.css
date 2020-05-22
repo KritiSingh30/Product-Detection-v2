@@ -11,8 +11,6 @@
     }
   }
 */
-
-/*----------------------- B O D Y  O F  P A G E----------------- */
 body, html {
     height: 100%;
     margin-top: none;
@@ -21,20 +19,7 @@ body, html {
     background-color: white;
     font-family: 'Roboto Condensed', sans-serif;
   }
-/*------------------- S C R O L L   B A R----------------------- */
-::-webkit-scrollbar {
-    width: 1em;
-  }
-   
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-   
-::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
-  }
-/*-------------------------- H E A D E R ------------------------*/
+
 .header {
     overflow: hidden;
     background-color: white;
@@ -51,12 +36,11 @@ body, html {
     font-size: 18px;
     line-height: 25px;
 }
-/*---------------------- S Y N G E N T A   L O G O-----------------*/
 .header a.logo {
     font-size: 25px;
     font-weight: bold;
 }
-/*------------------------- A L L  H E A D I N G S---------------- */
+
 h1{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 48px;
@@ -81,81 +65,28 @@ h3{
     margin-top: 0;
     text-align: center;
 }
-/*===============================================================*/
-/*--------------------COLUMN CONTAINER--------------------------*/
-
+/*
+.footer {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#424242;
+    color: white;
+    text-align: center;
+ }
+*/
  .container {
      margin-left: 20px;
  }
- .col {
-    align-self: center;
-    float: left;
-    width: 380px;
-    padding: 15px;
-    height: 200px;
-    
-    flex-wrap: wrap;
+
+ #output{
+     width: 350px;
+     height: 200px;
  }
 
- /* -----------------------UPLOAD IMAGE (1ST COLUMN)---------- */
- #image-upload{
-    height: 300px;
-    background-color: #f7f7f7;
-    margin-left: 20px;
-}
-/*----------------- INPUT FILE BUTTON ------------------------- */ 
-input[type='file']::-webkit-file-upload-button
-{   
-   
-   background-color: #84973b;
-   border: none;
-   font-family: 'Roboto Condensed', sans-serif;
-   font-size: 18px;
-   font-weight: 500;
-   color: #FFFFFF;
-   padding: 10px;
-   width: 150px;
-   text-align: center;
-   transition-duration: 0.4s;
-   text-decoration: none;
-   overflow: hidden;
-   cursor: pointer;
-   border-radius: 30px;
-   
-}
-input[type='file']::-webkit-file-upload-button:hover {
-   background-color: #006d82;
-}
-
-/*-----------------------------IMAGE OUTPUT --------------------------*/
-#output {
-    margin-top: 20px;
-    margin-left: 13px;
-    overflow: scroll;
-    height: 200px;
-    width: 350px;
-    height: 200px;
-}
-/*=======================================================================*/
-/*--------------- RESULT OF VISION CHECK (2ND COLUMN)--------------------*/
-#product-check {
-    height: 300px;
-    background-color: #f7f7f7;
-    margin-left: 0px;
-   
-}
-#textResults{
-   color: bisque;
-   text-align: center;
-   height: 50px;
-   width: 350px;
-   margin-left: 20px;
-   margin-top: 30px;
-   font-size: 20px;
-   padding-top: 10px;
-}
-/*======================================================================*/
-/*---------- LIST OF SYNGENTA PRODUCTS (3RD COLUMN) -------------------*/
  #products{
      
      background-color: #f7f7f7;
@@ -166,9 +97,66 @@ input[type='file']::-webkit-file-upload-button:hover {
     
  }
  
-/*====================================================*/
-/*----------- MEDIA QUERIES --------------------------*/
- 
+ #image-upload{
+     height: 300px;
+     background-color: #f7f7f7;
+     margin-left: 20px;
+ }
+ input[type='file']::-webkit-file-upload-button
+{   
+    
+    background-color: #84973b;
+    border: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 30px;
+    
+}
+input[type='file']::-webkit-file-upload-button:hover {
+    background-color: #006d82;
+}
+
+
+ #output {
+     margin-top: 20px;
+     margin-left: 13px;
+     overflow: scroll;
+     height: 200px;
+ }
+ #product-check {
+     height: 300px;
+     background-color: #f7f7f7;
+     margin-left: 0px;
+    
+ }
+ #textResults{
+    color: bisque;
+    text-align: center;
+    height: 50px;
+    width: 350px;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+    padding-top: 10px;
+ }
+ #tick {
+     margin-left: 50px;
+     margin-top: 80px;
+     visibility: hidden;
+ }
+ #cross{
+     margin-left: 80px;
+     visibility: hidden;
+ }
 @media screen and (max-width: 500px) {
     .header a {
       float: none;
@@ -206,3 +194,36 @@ input[type='file']::-webkit-file-upload-button:hover {
     }
 }
 
+    .col {
+        align-self: center;
+        float: left;
+        width: 380px;
+        padding: 15px;
+        height: 200px;
+        
+        flex-wrap: wrap;
+     } 
+
+     
+     ::-webkit-scrollbar {
+        width: 1em;
+      }
+       
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+       
+      ::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+      }
+
+   
+
+
+
+
+
+
+
+      /* M E D I A  Q U E R I E S */
