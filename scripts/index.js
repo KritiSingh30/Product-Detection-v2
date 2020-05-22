@@ -1,7 +1,10 @@
+
 //DISPLAY IMAGE ON SCREEN
 var loadFile = function(event) {
     var image = document.getElementById('output');
     image.src = URL.createObjectURL(event.target.files[0]);
+    document.getElementById("textResults").innerHTML=" ";
+    document.getElementById("textResults").style.backgroundColor="#f7f7f7"
     };
 
 //Show result function
@@ -36,14 +39,24 @@ function showResponse(contents){
     function processRequest(e){
         if(xhr.readyState == 4 && xhr.status == 200){
             alert(xhr.responseText);
-            var data = JSON.parse(xhr.responseText);
-            var final_text = data.responses[0].textAnnotations[0].description
-            var el_down = document.getElementById("textResults"); 
-            el_down.innerHTML = JSON.stringify((final_text).replace("\n", ' '));
-            var x =  document.getElementById("textResults").textContent;
-            const arr1 = ["MUSIC","skin", "lotion"];
-            let hasSome = arr1.some(item => x.includes(item));
+            let data = JSON.parse(xhr.responseText);
+            let final_text = data.responses[0].textAnnotations[0].description
+            const result_field = document.getElementById("textResults"); 
+            const resultCol = document.getElementById("product-check");
+            //el_down.innerHTML = JSON.stringify((final_text).replace("\n", ' '));
+            //var x =  document.getElementById("textResults").textContent;
+            const arr1 = ["Agrimec","Alika","Ampligo","Axial","Cymbush","Folio Gold"]; //Ignore case
+            let hasSome = arr1.some(item => final_text.includes(item));
             console.log(hasSome);
+            if(hasSome){
+                //console.log("Syngenta Product");
+                result_field.innerHTML = "Genuine Syngenta Product";
+                result_field.style.backgroundColor="#84973b";
+            }
+            else{
+                result_field.innerHTML = "Not a genuine Syngenta Product";
+                result_field.style.backgroundColor="#f13943";
+            }
             
         }
     }

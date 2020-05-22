@@ -6,7 +6,7 @@
     <!-- FavIcon Missing -->
     <link rel="stylesheet" type="text/css" href="./styling/style.css">
     <title>Product Detection v2</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
     <script src="./scripts/index.js"></script>
 
 </head>
@@ -20,8 +20,8 @@
 
     <!-- B O D Y -->
     <div class="body-text">
-        <h1>Know the difference</h1>
-        <h2>Find out if the syngenta products you are using are real</h2>    
+        <h1>Know the <span class="tag-h1">difference</span></h1>
+        <h2>Choose the original Syngenta products for your crops</h2>    
     </div>
 
     <!-- P R O D U C T  S E A R C H-->
@@ -29,7 +29,7 @@
     <div class="container">
 
 
-        <div class="col div_1_of_3 ">
+        <div class="col div_1_of_3 " id="image-upload">
             <div class="search-box__image-upload">
                <input type="file" name="upload" id="file" accept="image/*" onchange="showResult( this.files[0]); loadFile(event)">
                 <img id="output" width="300" />
@@ -37,20 +37,48 @@
         </div>
 
 
-        <div class="col div_2_of_3 ">
-            Results
-            <div class="search-box__image-results" id="textResults"></div>
-            
+        <div class="col div_2_of_3 " id="product-check">
+            <h2>Result</h2>
+            <div class="search-box__image-results" id="textResults"></div>           
         </div>
 
 
-        <div class="col div_2_of_3 "  >
-            Our Products
+        <div class="col div_2_of_3 " id="products" >
+            <h3>Our Products</h3>
+            <div class="product-1">
+                <a href="https://www.syngenta.com/">
+                    <img src="./Product images/insecticides.jpg" alt="" >
+                </a>
+            </div>
+            <div class="product-1">
+                <a href="https://www.syngenta.com/">
+                    <img src="./Product images/pesticides.png" alt="" style="width: 350px; height: 250px;" >
+                </a>
+            </div>
+            <div class="product-1">
+                <a href="https://www.syngenta.com/">
+                    <img src="./images/img1.jpg" alt="" style="width: 350px; height: 250px;" >
+                </a>
+            </div>
+            <div class="product-1">
+                <a href="https://www.syngenta.com/">
+                    <img src="./images/img1.jpg" alt="" style="width: 350px; height: 250px;" >
+                </a>
+            </div>
         </div>
     </div>
-    
-    
 
+    <div style="clear: both"></div>
+
+    <div>
+       <h1><u>Buy our original products here </u> </h1>
+    </div>
+    <footer>
+        This is the footer 
+    </footer>
+    
+    
+    
 
 </body>
 </html>
